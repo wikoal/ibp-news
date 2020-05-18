@@ -121,8 +121,33 @@
               "devServerTarget": "news-ibp:serve:production"
             }
           }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "news-ibp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "news-ibp:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "news-ibp:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "news-ibp:serve:production"
+            }
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "news-ibp"
 }
