@@ -1,0 +1,12 @@
+<mat-card class="card-custom">
+    <div class="picture" [ngStyle]="{'background-image': 'url('+ item.urlToImage +')'}"></div>
+    <div class="picture2" data-img="item.urlToImage"></div>
+    <div *ngIf="item.source.id!==null" mat-card-avatar [ngStyle]="{'background-image': 'url(../../../assets/images/'+ item.source.id +'.png)'}" class="logo-source"></div>
+    <div class="editor">{{item.source.name}}</div>
+    <mat-card-title>{{item.title}}</mat-card-title>
+    <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+    <!--mat-card-content> {{item.content}}</!--mat-card-content-->
+
+    <!--mat-card-actions> actions</!--mat-card-actions-->
+    <mat-card-footer> action</mat-card-footer>
+</mat-card>
