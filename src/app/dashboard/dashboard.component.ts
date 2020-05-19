@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   currentCountry = 'fr';
   categoryList = CATEGORY;
   countryList = COUNTRY;
+  currentLanguage = 'fr';
   currentSource = '';
   sourceList = [];
   constructor(private news: NewsApiService) { }

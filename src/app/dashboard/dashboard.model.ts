@@ -22,4 +22,4 @@ export const CATEGORY: string[] = [
   'sports',
   'technology'
 ];
-export const COUNTRY: string[] = ['fr', 'gb', 'ru', 'ua', 'us'];
+export const COUNTRY: string[] = ['fr', 'gb', 'de', 'jp', 'au', 'it' , 'us'];

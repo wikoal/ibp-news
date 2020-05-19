@@ -33,4 +33,12 @@ export class NewsApiService {
       }`
     );
   }
+  getNewsByLanguage(language: string){
+    return this.http.get(
+    `https://newsapi.org/v2/sources?language=${language}&apiKey=${
+        this.api_key
+      }`
+    );
+  }
 }
+

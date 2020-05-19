@@ -1,12 +1,17 @@
 <mat-card class="card-custom">
-    <div class="picture" [ngStyle]="{'background-image': 'url('+ item.urlToImage +')'}"></div>
-    <div class="picture2" data-img="item.urlToImage"></div>
-    <div *ngIf="item.source.id!==null" mat-card-avatar [ngStyle]="{'background-image': 'url(../../../assets/images/'+ item.source.id +'.png)'}" class="logo-source"></div>
-    <div class="editor">{{item.source.name}}</div>
-    <mat-card-title>{{item.title}}</mat-card-title>
-    <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
-    <!--mat-card-content> {{item.content}}</!--mat-card-content-->
+    <div class="picture" [ngStyle]="{'background-image': 'url('+ item.urlToImage +')'}">
+        <div class="ours">
 
-    <!--mat-card-actions> actions</!--mat-card-actions-->
-    <mat-card-footer> action</mat-card-footer>
+            <div class="editor">{{item.source.name}}</div>
+        </div>
+    </div>
+
+
+    <a href="{{item.url}}" [ngClass]="{'has-Author': item.author!==null}" target="_blank" rel="noopener noreferrer">
+        <mat-card-title>{{item.title}}</mat-card-title>
+    </a>
+
+
+    <div *ngIf="item.author!==null" class="author"><span>BY</span>{{item.author}}</div>
+
 </mat-card>

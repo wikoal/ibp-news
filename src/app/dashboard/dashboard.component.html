@@ -1,26 +1,28 @@
-<div class="bar">
+<div class="sidebar-source">
+    <ul>
+        <li *ngFor="let source of sourceList">
+            <button (click)="updateSource(source.id)" data-name="source.name" [ngStyle]="{'background-image': 'url(../../../assets/images/'+ source.id +'.png)'}"></button>
+        </li>
+    </ul>
+</div>
+<nav class="bar">
     <select name="currentCategory" class="" [(ngModel)]="currentCategory" (change)="onChange()">
     <option *ngFor="let category of categoryList"
     [ngValue]="category">{{ category }}</option>
-</select>
+    </select>
 
     <select name="currentCountry" class="form-control bg-dark text-white" [(ngModel)]="currentCountry" (change)="onChange()">
         <option *ngFor="let country of countryList" [ngValue]="country">{{ country }}</option>
-      </select>
+    </select>
 
 
     <select name="currentSource" class="form-control bg-dark text-white" [(ngModel)]="currentSource" (change)="onChangeSource()">
-<option *ngFor="let source of sourceList" [ngValue]="source.id">{{ source.name }}</option>
+
+      <option *ngFor="let source of sourceList" [ngValue]="source.id">{{ source.name }}</option>
 </select>
-</div>
+</nav>
 <div class="content">
-    <div class="sidebar-source">
-        <ul>
-            <li *ngFor="let source of sourceList">
-                <button (click)="updateSource(source.id)" data-name="source.name" [ngStyle]="{'background-image': 'url(../../../assets/images/'+ source.id +'.png)'}"></button>
-            </li>
-        </ul>
-    </div>
+
     <div class="grid">
         <app-article *ngFor="let news of newsList" [item]="news"></app-article>
     </div>
